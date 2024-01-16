@@ -17,6 +17,7 @@ def staging():
 
     if ref == 'refs/heads/testing':
         # Logic for testing branch
+        print("Run testing script")
         run_test_script()
         return "Testing branch hook received successfully!"
 
@@ -29,6 +30,7 @@ def deployment():
 
     if ref == 'refs/heads/main':
         # Logic for deployment branch
+        print('Run deployment script')
         run_deploy_script()
         return "Deployment branch hook received successfully!"
 
