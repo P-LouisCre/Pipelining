@@ -2,6 +2,14 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+import subprocess
+
+def run_test_script():
+    subprocess.run('test_script.bat', shell=True)
+
+def run_deploy_script():
+    subprocess.run('deploy_script.bat', shell=True)
+
 @app.route('/staging', methods=['POST'])
 def staging():
     payload = request.json

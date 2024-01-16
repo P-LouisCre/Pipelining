@@ -5,13 +5,7 @@ app = Flask(__name__)
 # In-memory database
 items = []
 
-import subprocess
 
-def run_test_script():
-    subprocess.run('test_script.bat', shell=True)
-
-def run_deploy_script():
-    subprocess.run('deploy_script.bat', shell=True)
 
 @app.route('/')
 def index():
