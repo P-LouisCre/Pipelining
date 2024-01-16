@@ -17,6 +17,7 @@ def staging():
 
     if ref == 'refs/heads/testing':
         # Logic for testing branch
+        run_test_script()
         return "Testing branch hook received successfully!"
 
     return "Invalid branch hook received."
@@ -28,6 +29,7 @@ def deployment():
 
     if ref == 'refs/heads/main':
         # Logic for deployment branch
+        run_deploy_script()
         return "Deployment branch hook received successfully!"
 
     return "Invalid branch hook received."
