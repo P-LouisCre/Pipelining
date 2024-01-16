@@ -7,11 +7,11 @@ items = []
 
 import subprocess
 
-# Inside the testing route
-subprocess.run('./test_script.sh')
+def run_test_script():
+    subprocess.run('test_script.bat', shell=True)
 
-# Inside the deployment route
-subprocess.run('./deploy_script.sh')
+def run_deploy_script():
+    subprocess.run('deploy_script.bat', shell=True)
 
 @app.route('/')
 def index():
