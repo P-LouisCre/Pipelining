@@ -15,7 +15,7 @@ def staging():
     payload = request.json
     ref = payload.get('ref', '')
 
-    if ref == 'refs/heads/testing':
+    if ref == 'refs/heads/staging':
         # Logic for testing branch
         print("Run testing script")
         run_test_script()
