@@ -1,4 +1,4 @@
 @echo off
 git pull origin staging
 pip install -r requirements.txt
-python run_tests.py
+python unit_test.py
