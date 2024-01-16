@@ -2,8 +2,8 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/testing', methods=['POST'])
-def testing():
+@app.route('/staging', methods=['POST'])
+def staging():
     payload = request.json
     ref = payload.get('ref', '')
 
