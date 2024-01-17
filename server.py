@@ -1,14 +1,13 @@
 from flask import Flask, request
+import os
 
 app = Flask(__name__)
 
-import subprocess
-
 def run_test_script():
-    subprocess.run('test_script.bat', shell=True)
+    os.system('test_script.bat')
 
 def run_deploy_script():
-    subprocess.run(['cmd', '/c', 'deploy_script.bat'])
+    os.system('cmd /c deploy_script.bat')
 
 @app.route('/staging', methods=['POST'])
 def staging():
