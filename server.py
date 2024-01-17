@@ -9,9 +9,7 @@ def run_test_script():
     subprocess.run('test_script.bat', shell=True)
 
 def run_deploy_script():
-    script_path = os.path.join(os.getcwd(), 'deploy_script.bat')
-    result = subprocess.run(['cmd', '/c', script_path], capture_output=True, text=True)
-    print(result.stdout)
+    subprocess.call(['cmd', '/c', 'deploy_script.bat'])
 
 @app.route('/staging', methods=['POST'])
 def staging():
