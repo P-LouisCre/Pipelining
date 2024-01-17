@@ -1,3 +1,4 @@
+import time
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -32,7 +33,10 @@ def deployment():
         # Logic for deployment branch
         print('Run deployment script')
         run_deploy_script()
+        time.sleep(2)
         return "Deployment branch hook received successfully!"
+        
+
 
     return "Invalid branch hook received."
 
