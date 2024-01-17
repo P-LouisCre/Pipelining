@@ -1,4 +1,2 @@
 # Pipelining
 
-j"jévb"ùévb"
-
