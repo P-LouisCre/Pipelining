@@ -3,12 +3,14 @@ import os
 
 app = Flask(__name__)
 
+import subprocess
+
 def run_test_script():
-    os.system('test_script.bat')
+    subprocess.run('test_script.bat', shell=True)
 
 def run_deploy_script():
     os.system('cmd /c deploy_script.bat')
-
+    
 @app.route('/staging', methods=['POST'])
 def staging():
     payload = request.json
