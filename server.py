@@ -36,5 +36,7 @@ def deployment():
 
     return "Invalid branch hook received."
 
+"hey"
+
 if __name__ == '__main__':
     app.run(debug=True)
