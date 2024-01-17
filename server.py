@@ -1,4 +1,3 @@
-import os
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -33,7 +32,6 @@ def deployment():
         # Logic for deployment branch
         print('Run deployment script')
         run_deploy_script()
-        os._exit(0)
         return "Deployment branch hook received successfully!"
         
     return "Invalid branch hook received."
