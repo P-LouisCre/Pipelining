@@ -9,7 +9,7 @@ def run_test_script():
     subprocess.run('test_script.bat', shell=True)
 
 def run_deploy_script():
-    os.system('cmd /c deploy_script.bat')
+    subprocess.run(['cmd', '/c', 'deploy_script.bat'])
 
 @app.route('/staging', methods=['POST'])
 def staging():
@@ -37,6 +37,6 @@ def deployment():
         
     return "Invalid branch hook received."
 
-#
+
 if __name__ == '__main__':
     app.run(debug=True, port = 5001)
