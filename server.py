@@ -1,9 +1,15 @@
 from flask import Flask, request
 import os
+from threading import Thread
+
+
 
 app = Flask(__name__)
 
 import subprocess
+
+def run_flask():
+    app.run(debug=True, port=5001, use_reloader=False)
 
 def run_test_script():
     subprocess.run('test_script.bat', shell=True)
@@ -37,6 +43,9 @@ def deployment():
         
     return "Invalid branch hook received."
 
-#
+
+
 if __name__ == '__main__':
-    app.run(debug=True, port = 5001)
+    # Run Flask in a separate thread
+    Thread(target=run_flask).start()
+
