@@ -43,9 +43,6 @@ def deployment():
         
     return "Invalid branch hook received."
 
-##
-
 if __name__ == '__main__':
-    # Run Flask in a separate thread
     Thread(target=run_flask).start()
 
