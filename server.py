@@ -10,7 +10,7 @@ def run_test_script():
 
 def run_deploy_script():
     os.system('cmd /c deploy_script.bat')
-    
+
 @app.route('/staging', methods=['POST'])
 def staging():
     payload = request.json
@@ -37,6 +37,6 @@ def deployment():
         
     return "Invalid branch hook received."
 
-
+#
 if __name__ == '__main__':
     app.run(debug=True, port = 5001)
