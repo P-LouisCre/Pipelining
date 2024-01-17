@@ -1,4 +1,4 @@
-import time
+import os
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -20,10 +20,9 @@ def staging():
         # Logic for testing branch
         print("Run testing script")
         run_test_script()
-        time.sleep(2)
-
+        os._exit(0)
         return "Testing branch hook received successfully!"
-
+    
     return "Invalid branch hook received."
 
 @app.route('/deployment', methods=['POST'])
