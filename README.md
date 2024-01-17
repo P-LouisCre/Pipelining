@@ -1,4 +1,2 @@
 # Pipelining
-# hey
-f
-# yo
+
