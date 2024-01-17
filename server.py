@@ -5,10 +5,10 @@ app = Flask(__name__)
 import subprocess
 
 def run_test_script():
-    subprocess.run("C:\Efrei\M2\Machine_learning_in_production\Pipelining\Pipelining\test_script.bat", shell=True)
+    subprocess.run('test_script.bat', shell=True)
 
 def run_deploy_script():
-    subprocess.run("C:\Efrei\M2\Machine_learning_in_production\Pipelining\Pipelining\deploy_script.bat", shell=True)
+    subprocess.run('deploy_script.bat', shell=True)
 
 @app.route('/staging', methods=['POST'])
 def staging():
