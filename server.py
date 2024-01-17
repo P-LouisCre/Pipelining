@@ -20,6 +20,8 @@ def staging():
         # Logic for testing branch
         print("Run testing script")
         run_test_script()
+        time.sleep(2)
+
         return "Testing branch hook received successfully!"
 
     return "Invalid branch hook received."
@@ -33,7 +35,6 @@ def deployment():
         # Logic for deployment branch
         print('Run deployment script')
         run_deploy_script()
-        time.sleep(2)
         return "Deployment branch hook received successfully!"
         
 
