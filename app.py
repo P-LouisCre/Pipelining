@@ -6,10 +6,6 @@ app = Flask(__name__)
 items = []
 
 @app.route('/')
-def home():
-    return "Hello, World!"
-
-@app.route('/')
 def index():
     return render_template('index.html', items=items)
 
