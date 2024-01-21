@@ -2,7 +2,6 @@ from flask import Flask, request, render_template, redirect, url_for
 
 app = Flask(__name__)
 
-# In-memory database
 items = []
 
 @app.route('/')
