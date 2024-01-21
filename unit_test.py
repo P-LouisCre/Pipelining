@@ -1,5 +1,5 @@
 import unittest
-from repo.app import app
+from app import app
 
 class TestFlaskApp(unittest.TestCase):
 
